@@ -4,10 +4,12 @@ import { Demo } from "@/components/Demo";
 import { Testimonials } from "@/components/Testimonials";
 import { Pricing } from "@/components/Pricing";
 import { Footer } from "@/components/Footer";
+import { Header } from "@/components/Header";
 
 const Index = () => {
   return (
     <div className="min-h-screen">
+      <Header />
       <Hero />
       <Features />
       <Demo />

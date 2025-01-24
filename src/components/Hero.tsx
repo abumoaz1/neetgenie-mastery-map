@@ -1,5 +1,6 @@
 import { GraduationCap, Brain, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 export const Hero = () => {
   return (
@@ -16,14 +17,15 @@ export const Hero = () => {
             Get personalized NCERT plans, 24/7 AI mentorship, and All India mock rankings
           </p>
           <div className="flex flex-col space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
-            <Button
-              size="lg"
-              className="bg-white text-primary hover:bg-gray-100"
-              onClick={() => window.location.href = "#demo"}
-            >
-              Start Free Today
-              <ArrowRight className="ml-2" size={20} />
-            </Button>
+            <Link to="/login">
+              <Button
+                size="lg"
+                className="bg-white text-primary hover:bg-gray-100"
+              >
+                Start Free Today
+                <ArrowRight className="ml-2" size={20} />
+              </Button>
+            </Link>
             <Button
               size="lg"
               variant="outline"

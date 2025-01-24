@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 export const Header = () => {
   return (
-    <header className="w-full border-b">
+    <header className="w-full border-b sticky top-0 bg-background z-50">
       <div className="container mx-auto px-4 py-4">
         <nav className="flex items-center justify-between">
           <div className="flex items-center gap-2">
@@ -25,11 +25,15 @@ export const Header = () => {
           </div>
 
           <div className="flex items-center gap-4">
-            <Button variant="outline" className="hidden md:flex items-center gap-2">
-              <LogIn className="h-4 w-4" />
-              Login
-            </Button>
-            <Button>Register</Button>
+            <Link to="/login">
+              <Button variant="outline" className="hidden md:flex items-center gap-2">
+                <LogIn className="h-4 w-4" />
+                Login
+              </Button>
+            </Link>
+            <Link to="/register">
+              <Button>Register</Button>
+            </Link>
           </div>
         </nav>
       </div>
